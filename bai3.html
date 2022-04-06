@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <script>
+            function Apple() {
+                this.weight = 2;
+                this.getWeight = function () {
+                    return this.weight;
+                }
+                this.decrease = function () {
+                    if (this.weight > 0) {
+                        this.weight--;
+                    }
+                }
+            }
+            function Human(name, gender, weight, say) {
+                this.name = name;
+                this.weight = weight;
+                this.gender = gender;
+                this.say = say;
+                this.getName = function () {
+                    return this.name;
+                }
+                this.getGender = function () {
+                    return this.gender;
+                }
+                this.getWeight = function () {
+                    return this.weight;
+                }
+                this.getSay = function () {
+                    return this.say;
+                }
+                this.setName = function (value) {
+                    this.name = value;
+                }
+                this.setGender = function (value) {
+                    this.gender = value;
+                }
+                this.setWeight = function (value) {
+                    this.weight = value;
+                }
+                this.setSay = function (value) {
+                    this.say = value;
+                }
+                this.checkApple = function (apple) {
+                    if (apple.getWeight() > 0) {
+                        this.status = true;
+                    }
+                    else {
+                        this.status = false;
+                    }
+                }
+                this.anTao = function (apple) {
+                    this.checkApple(apple);
+                    if (this.status == true) {
+                        this.weight++;
+                        apple.decrease();
+                    }
+                    else {
+                        console.log("Hết táo roài bạn ơi!")
+                    }
+                }
+            }
+            let human = new Human("Adam", "men", 50, "Xin chào các bạn");
+            let tao = new Apple;
+            human.setSay("Tôi là " + human.getName() + " đây các bạn ơi");
+            human.anTao(tao);
+            console.log(human.getWeight());
+            console.log(tao.getWeight());
+            console.log(human.getSay());
+            human.anTao(tao);
+            console.log(human.getWeight());
+            console.log(tao.getWeight());
+            human.anTao(tao);
+            console.log(human.getWeight());
+            console.log(tao.getWeight());
+            human.getSay();
+        </script>
+    </body>
+
+</body>
+
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+        <script>
+            function Chuot(ten, cannang, tocdo, trangthai, tiengkeu) {
+                this.ten = ten;
+                this.cannang = cannang;
+                this.tocdo = tocdo;
+                this.trangthai = trangthai;
+                this.tiengkeu = tiengkeu;
+                this.getTen = function () {
+                    return this.ten;
+                }
+                this.getCanNang = function () {
+                    return this.cannang;
+                }
+                this.getTocDo = function () {
+                    return this.tocdo;
+                }
+                this.getTrangThai = function () {
+                    return this.trangthai;
+                }
+                this.getTiengKeu = function () {
+                    return this.tiengkeu;
+                }
+                this.setTen = function (value) {
+                    this.ten = value;
+                }
+                this.setCanNang = function (value) {
+                    this.cannang = value;
+                }
+                this.setTrangThai = function (value) {
+                    this.trangthai = value;
+                }
+                this.setTiengKeu = function (value) {
+                    this.tiengkeu = value;
+                }
+            }
+            function Meo(ten, cannang, tocdo, trangthai, tiengkeu) {
+                this.ten = ten;
+                this.cannang = cannang;
+                this.tocdo = tocdo;
+                this.trangthai = trangthai;
+                this.tiengkeu = tiengkeu;
+                this.getTen = function () {
+                    return this.ten;
+                }
+                this.getCanNang = function () {
+                    return this.cannang;
+                }
+                this.getTocDo = function () {
+                    return this.tocdo;
+                }
+                this.getTrangThai = function () {
+                    return this.trangthai;
+                }
+                this.getTiengKeu = function () {
+                    return this.tiengkeu;
+                }
+                this.setTen = function (value) {
+                    this.ten = value;
+                }
+                this.setCanNang = function (value) {
+                    this.cannang = value;
+                }
+                this.setTrangThai = function (value) {
+                    this.trangthai = value;
+                }
+                this.setTiengKeu = function (value) {
+                    this.tiengkeu = value;
+                }
+                this.meoCanChuot = function (chuot) {
+                    if (this.tocdo > chuot.getTocDo()) {
+                        if (chuot.getTrangThai() == "sống") {
+                            this.cannang++;
+                        }
+                        else if (chuot.getTrangThai() == "chết") {
+                            console.log("Chuột này không ăn!")
+                        }
+                    }
+                    else {
+                        console.log("Mèo không đuổi kịp chuột roài!")
+                    }
+                }
+            }
+            let chuot1 = new Chuot("A", 10, 8, "sống", "chít chít");
+            let chuot2 = new Chuot("A2", 10, 0, "chết", "");
+            let meo1 = new Meo("B", 20, 10, "sống", "meo meo");
+            meo1.setCanNang(22);
+            let meo2 = new Meo("B", 20, 6, "sống", "gao gao");
+            meo1.meoCanChuot(chuot1);
+            console.log(meo1.getCanNang());
+        </script>
+    </body>
+
+</body>
+
+</html>

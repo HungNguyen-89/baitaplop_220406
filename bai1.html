@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <body>
+<canvas id="DemoCanvas" width="500" height="500"></canvas><br>
+        <script>
+            let canvas = document.getElementById('DemoCanvas');
+            let ctx = canvas.getContext('2d');
+            function Rectangle(chieudai, chieurong) {
+                this.chieudai = chieudai;
+                this.chieurong = chieurong;
+                this.getChieuDai = function () {
+                    return this.chieudai;
+                }
+                this.getChieuRong = function () {
+                    return this.chieurong;
+                }
+                this.setChieuDai = function (value) {
+                    this.chieudai = value;
+                }
+                this.setChieuRong = function (value) {
+                    this.chieurong = value;
+                }
+                this.tinhDienTich = function () {
+                    return this.chieudai * this.chieurong;
+                }
+                this.tinhChuVi = function () {
+                    return 2 * (this.chieudai + this.chieurong);
+                }
+            }
+            let rec = new Rectangle;
+            rec.setChieuDai(200);
+            rec.setChieuRong(100);
+            document.write(rec.tinhChuVi() + "<br>");
+            document.write(rec.tinhDienTich());
+            ctx.fillRect(10, 10, rec.getChieuDai(), rec.getChieuRong());
+        </script>
+    </body>
+
+</body>
+
+</html>
